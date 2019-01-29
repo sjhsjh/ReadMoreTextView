@@ -94,7 +94,12 @@ public class ReadMoreTextView extends TextView {
     public void setText(CharSequence text, BufferType type) {
         this.text = text;
         bufferType = type;
+        // edit bt sjh
+//        setText();
+        super.setText(text, bufferType);
+        refreshLineEndIndex();
         setText();
+        // edit bt sjh
     }
 
     private CharSequence getTrimmedText(CharSequence text) {
